@@ -1,0 +1,25 @@
+*{
+  padding:0;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.cartSection{
+  background-color: blueviolet;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
