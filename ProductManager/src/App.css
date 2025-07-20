@@ -1,0 +1,17 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Dashboard{
+  background-color: rgb(233, 237, 241);
+  width: 70vw;
+  border-radius: 20px;
+  padding: 20px;
+}
