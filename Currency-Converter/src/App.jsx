@@ -1,22 +1,45 @@
-import { useState } from 'react' ;
-import {useCurrencyInfo} from './hooks/useCurrencyInfo.js' ;
-import InfoCard from './components/InfoCard.jsx' ;
+import { useEffect, useState } from 'react';
+import useCurrencyInfo from './hooks/CurrencyInfo.js';
+import InfoCard from './components/InfoCard.jsx';
 
-import './App.css'
+import './App.css';
 
 function App() {
-  let [from, setFrom] = useState("pkr") ;
-  let [to,setTo] = useState("usd") ;
-  let [amount, setAmount] = useState(0);
-  let [ConvertedAmount, setConvertedAmount] = useState(0) ;
+  const [from, setFrom] = useState("usd");
+  const [to, setTo] = useState("pkr");
 
-  let currencyRates = useCurrencyInfo(from) ; // this will give me rates for pkr.
+  const [amount, setAmount] = useState(0);
+  const [convertedAmount, setConvertedAmount] = useState(0);
+
+  const currencyRates = useCurrencyInfo(from); // fetches rates based on 'from' currency
+
+  useEffect(() => {
+    if (currencyRates && currencyRates[to]) {
+      const result = currencyRates[to] * amount;
+      setConvertedAmount(result);
+    }
+  }, [amount, to, currencyRates]);
 
   return (
     <>
-      <InfoCard label={"from"} amount={amount} ConvertedAmount={ConvertedAmount}/>
+      <InfoCard
+        label="from"
+        amount={amount}
+        setAmount={setAmount}
+        currency={from}
+        setCurrency={setFrom}
+        options={Object.keys(currencyRates)}
+      />
+
+      <InfoCard
+        label="to"
+        finalAmount={convertedAmount}
+        SelectedCurrency={to}
+        setSelectedCurrency={setTo}
+        options={Object.keys(currencyRates)}
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,27 @@
+--> UseEffect <--
+-> Purpose:
+UseEffect is used when there is constant change of a state. So in order to avoid reRenders and optimize performance we use the UseEffect. On every stateChange there are re-Renders so we want state change but no re-renders so we use the useEffect. We give it dependencies that you may change or you may do this only when this changes.
+
+-> Places where it can be used:
+It is used istead of async and await (async functions) in jsx(react).
+It is also used to controll the calling of a function (that is memoized). The dependencies here mean that you may call this function when there is a change in these functions.
+Instead of async we resolve the promise in the useEffect.
+
+--> CustomHooks <--
+In this project I learned that the customHooks are just basically functions. We make them in pure javascript so that they do something and then return us a result. We make
+them often when we are doing something outside our react (app.jsx) file. Like fetching an api.
+
+The customHooks are pretty much made by the other Hooks. Like we use other Hooks inside of this to make a Hook. It returns functions, arrays, objects. Depend on what we want. Basically like a class. Like a class we return functions etc from this hook 
+
+--> InputField <--
+This is very versatile. There are so many ways to use them. The properties of input are used for good UI
+-> Like the many types of input
+-> required
+-> checked
+-> placeholder
+-> value etc
+-> onChange (only in react)
+
+-> The onChange is a eventHandler in built also considered a property of input because it help change us the value of the input.
+-> When we use controlled Components (the one in which value gets its value from a state. So we use its setter to change the value of it)
+The onChange basically calls the setter of the state and change the value.
