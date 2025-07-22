@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 function About() {
+  let navigate = useNavigate() ;
+  let navigateToContact = () => {
+    navigate("/contact") ;
+  }
+
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
       <h1 className="text-4xl font-bold text-blue-700 text-center mb-8">
@@ -28,6 +35,14 @@ function About() {
           </p>
         </div>
       </div>
+
+      <div>
+        <br/>
+        <button onClick={navigateToContact} className="border border-blue-600 text-blue-600 px-6 py-2 rounded-full hover:bg-blue-50 transition"> 
+          Move to Contact Page
+        </button>
+      </div>
+
     </div>
   );
 }
