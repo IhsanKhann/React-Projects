@@ -1,0 +1,7 @@
+✅ Keep using UserProvider (Approach 2) — clean and scalable.
+
+🔁 Add helper functions like login() or logout() inside your provider.
+
+📂 Split logic into custom hook (useUser()) for cleaner consumption.
+
+🚫 Avoid putting too many providers or unrelated state in a single context.
