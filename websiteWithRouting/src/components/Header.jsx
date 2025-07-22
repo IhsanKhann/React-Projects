@@ -1,6 +1,7 @@
 import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
+import Github from "./Github" ;
 import { NavLink, Outlet } from "react-router-dom";
 
 function Header() {
@@ -44,6 +45,15 @@ function Header() {
             }
           >
             Contact
+          </NavLink>
+
+          <NavLink
+            to="/github"
+            className={({ isActive }) =>
+              `hover:text-yellow-300 transition font-medium ${isActive ? "text-yellow-300 underline" : ""}`
+            }
+          >
+            Github
           </NavLink>
         </div>
       </nav>
