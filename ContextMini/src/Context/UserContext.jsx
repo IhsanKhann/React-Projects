@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Children } from "react";
 import { createContext } from "react";
-const UserContext = createContext()
+const UserContext = createContext({})
  // the attribues and functions come here.
 
 const UserProvider = ({children}) => {
