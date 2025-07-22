@@ -1,0 +1,47 @@
+/* Login.css */
+
+body {
+  background-color: #fafafa;
+  font-family: 'Arial',"sans-serif";
+}
+
+.login-wrapper {
+  width: 350px;
+  margin: 60px auto;
+  padding: 40px 40px;
+  border: 1px solid #dbdbdb;
+  background-color: white;
+  text-align: center;
+}
+
+.login-wrapper input {
+  width: 100%;
+  padding: 9px;
+  margin: 6px 0;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: #fafafa;
+}
+
+.login-wrapper button {
+  width: 100%;
+  padding: 9px;
+  margin-top: 12px;
+  background-color: #0095f6;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-wrapper button:hover {
+  background-color: #007ed9;
+}
+
+.login-logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 36px;
+  color: #262626;
+  margin-bottom: 24px;
+}
