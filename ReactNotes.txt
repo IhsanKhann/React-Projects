@@ -113,3 +113,15 @@ like a template/component. inside the function with the useParams().
 
 useParams() and useLoader() 
 
+-> when using dynamic parameters like the :type or :id avoid the static paths
+or the navlinks for the same parent, to avoid reductancy. We avoid redunctany
+and we make mostly use one. For different parents ofc you can use it because
+they are independent of each other. 
+
+-> pre loading happens when the loader function is used as a key:value pair 
+inside the router with the config handler or the parent component whose
+children are dynamic.
+e.g: loader: logic of the loader manual function in the router and then
+in your config handle use
+-> Best way:
+	use the useLoaderData();
