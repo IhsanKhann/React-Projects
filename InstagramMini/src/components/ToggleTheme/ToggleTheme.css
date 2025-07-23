@@ -3,6 +3,10 @@
   display: flex;
   justify-content: flex-end;
   padding: 10px;
+  position: absolute;
+  top:0;
+  right: 250px;
+  z-index: 101;
 }
 
 .switch {
