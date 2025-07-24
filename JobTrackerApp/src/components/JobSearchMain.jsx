@@ -1,5 +1,5 @@
 
-import useJob from "./hooks/useJob";
+import useJob from "../hooks/useJob";
 function Main(){
     let Allproducts = useJob();
     let products = Allproducts.map(product =>
