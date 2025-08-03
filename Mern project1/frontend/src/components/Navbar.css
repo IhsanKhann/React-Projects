@@ -1,0 +1,49 @@
+.Navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background-color: #1f1f1f;
+  padding: 15px 30px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.Navbar a {
+  position: relative;
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  padding: 8px 12px;
+}
+
+.Navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+.Navbar a:hover::after {
+  width: 100%;
+}
+
+.Navbar a:hover {
+  color: #ffffff;
+}
+
+.active {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.active::after {
+  width: 100%;
+  background-color: #ffffff;
+}
